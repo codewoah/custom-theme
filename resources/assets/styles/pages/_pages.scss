@@ -1,0 +1,282 @@
+.login-form {
+  display: none;
+  &.active {
+    display: block;
+  }
+  small {
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    color: var(--dark-grey);
+    margin: space(2);
+    display: block;
+    a {
+      color: #142cd2;
+    }
+  }
+  h3 {
+    font-size: 22px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.45;
+    letter-spacing: normal;
+    color: var(--blue);
+    margin-bottom: space(4);
+    span {
+      display: flex;
+      font-size: 16px;
+      font-weight: normal;
+      color: var(--marine);
+      margin-top: 17px;
+      a {
+        color: var(--blue);
+        margin-left: 4px;
+      }
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: var(--blue);
+    margin-top: space(3);
+    margin-bottom: space(4);
+  }
+  &__submit {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__error {
+    margin-top: space(3);
+    color: var(--salmon);
+    text-align: left;
+    font-family: $font-400;
+  }
+}
+
+.thank-you {
+  position: relative;
+  &__logo {
+    padding: space(9) 0;
+    display: flex;
+    justify-content: center;
+  }
+  .mouth {
+    position: absolute;
+    top: 227px;
+    right: 144px;
+    @include down(1180) {
+        right: 30px;
+    }
+    @include down(1024) {
+      display: none;
+    }
+  }
+  .wave {
+    position: absolute;
+    left: 144px;
+    max-width: 213px;
+    top: 315px;
+    @include down(1180) {
+      left: 30px;
+    }
+    @include down(1024) {
+      display: none;
+    }
+  }
+  &:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1440px;
+    height: 505px;
+    background: url(../../images/wave-checkout.svg) no-repeat left;
+    background-size: contain;
+    z-index: -1;
+    @include down(800) {
+      height: 560px;
+    }
+  }
+  &__where-heard {
+    margin-top: space(11.25);
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    button {
+      margin: space(5) auto space(16);
+      width: 260px;
+    }
+    .options {
+      position: relative;
+      padding: 0 space(2);
+      &__item {
+        position: relative;
+        &:not(:last-child) {
+          margin-bottom: space(2);
+        }
+        input[type='radio']{
+          display: none
+        }
+        label {
+          position: relative;
+          display: flex;
+          font-size: 16px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.63;
+          letter-spacing: normal;
+          color: var(--marine);
+          cursor: pointer;
+          &:after {
+            left: space(1) !important;
+            top: space(1) !important;
+          }
+          input {
+            border: none;
+            width: 200px;
+            padding: 0 0 space(2) 0;
+            border-bottom: 1px solid var(--marine);
+            border-radius: 0;
+            margin: 2px 0 0 space(1);
+          }
+        }
+      }
+    }
+  }
+  h3 {
+    font-family: $font-600;
+    font-size: 22px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    text-align: center;
+    color: #142cd2;
+    margin-bottom: space(4);
+  }
+  p {
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.63;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--marine);
+  }
+}
+
+.page-content {
+  padding-top: 80px;
+  @include up(1024) {
+    padding-top: 140px;
+  }
+  .page-header {
+    margin-bottom: 100px;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1440px;
+    height: 505px;
+    background: url(../../images/wave-checkout.svg) no-repeat left;
+    background-size: contain;
+    z-index: -1;
+    @include down(800) {
+      height: 560px;
+    }
+  }
+  p {
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.63;
+    letter-spacing: normal;
+    color: var(--marine);
+      margin-bottom: space(3);
+  }
+  h2,h3,h4,h5,h6 {
+    color: var(--blue);
+    margin-bottom: space(4);
+    font-size: 32px;
+    font-family: $font-600;
+    letter-spacing: 1px;
+  }
+  figure {
+    margin: space(3) 0;
+  }
+  .wp-block-embed__wrapper {
+    overflow: hidden;
+    // Calculated from the aspect ration of the content (in case of 16:9 it is 9/16= 0.5625)
+    padding-top: 56.25%;
+    position: relative;
+  }
+
+  .wp-block-embed__wrapper iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  blockquote {
+    position: relative;
+    margin: space(3) 0;
+    &:before {
+      content: '';
+      width: 6px;
+      height: 100%;
+      background: var(--mint);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    p, cite {
+      margin-left: space(3);
+    }
+    p {
+      margin-bottom: space(2);
+      font-family: $font-600;
+    }
+    cite {
+      color: var(--marine);
+    }
+  }
+  ul, ol {
+    margin: space(3) 0;
+    padding: 0;
+    list-style: none;
+    li {
+      font-size: 16px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.63;
+      letter-spacing: normal;
+      color: var(--marine);
+      font-family: $font-600;
+      display: flex;
+      align-items: center;
+      &:before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background: var(--mint);
+        border-radius: 50%;
+        margin-right: space(1);
+      }
+    }
+  }
+
+}

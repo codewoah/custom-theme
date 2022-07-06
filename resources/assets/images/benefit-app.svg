@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="49" viewBox="0 0 50 49">
+    <g fill="none" fill-rule="evenodd">
+        <g stroke="#FFDCCC" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+            <path d="M3.32 8.42c0-4.44 3.635-8.04 8.12-8.04 4.484 0 8.119 3.6 8.119 8.04" transform="translate(1 1) rotate(90 24 24)"/>
+            <path d="M22.706 6.947L19.515 10.107 16.325 6.947M19.77 12.543c0 4.44-3.635 8.039-8.12 8.039-4.483 0-8.118-3.6-8.118-8.04" transform="translate(1 1) rotate(90 24 24)"/>
+            <path d="M0.385 14.014L3.575 10.856 6.765 14.014" transform="translate(1 1) rotate(90 24 24)"/>
+        </g>
+        <g>
+            <path stroke="#00315E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M31.334 46.563H14.24c-1.294 0-2.35-1.075-2.35-2.389V14.278c0-1.314 1.056-2.39 2.35-2.39h17.095c1.292 0 2.35 1.076 2.35 2.39v29.896c0 1.314-1.058 2.39-2.35 2.39z" transform="translate(1 1) translate(0 .495)"/>
+            <g stroke="#00315E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                <path d="M2.001 14.781L2.001 10.779" transform="translate(1 1) translate(0 .495) rotate(90 2.001 12.78)"/>
+                <path d="M16.367 4.003L16.367 0M10.906 4.909L9.261 1.268M5.528 7.264L2.726 4.433" transform="translate(1 1) translate(0 .495)"/>
+            </g>
+            <path stroke="#00315E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.268 42.539h9.037" transform="translate(1 1) translate(0 .495)"/>
+            <path fill="#D1FFED" d="M18.159 22.497L30.917 22.497 30.917 17.668 18.159 17.668z" transform="translate(1 1) translate(0 .495)"/>
+            <path stroke="#00315E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16.673 21.011L29.431 21.011 29.431 16.182 16.673 16.182z" transform="translate(1 1) translate(0 .495)"/>
+            <path fill="#D1FFED" d="M18.159 32.157L30.917 32.157 30.917 27.327 18.159 27.327z" transform="translate(1 1) translate(0 .495)"/>
+            <path stroke="#00315E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16.673 30.671L29.431 30.671 29.431 25.841 16.673 25.841z" transform="translate(1 1) translate(0 .495)"/>
+        </g>
+    </g>
+</svg>

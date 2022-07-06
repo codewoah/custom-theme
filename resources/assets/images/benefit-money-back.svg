@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35" height="38" viewBox="0 0 35 38">
+    <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+        <circle cx="16.5" cy="16.5" r="11.5" fill="#FFDCCC"/>
+        <path stroke="#00315E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.21 28.103L16.44 36l11.231-7.897s5.06-3.396 5.329-9.62c-.002-.037-.005-.061-.005-.061L32.87 3.119c-3.207 1.054-6.467.74-9.23-.01-2.286-.438-4.776-1.364-7.2-3.109-2.423 1.745-4.914 2.672-7.199 3.11-2.763.749-6.023 1.063-9.23.009L.004 18.422 0 18.483c.269 6.224 5.21 9.62 5.21 9.62z"/>
+        <text fill="#00315E" font-family="EuclidCircularB-Bold, Euclid Circular B" font-size="10" font-weight="bold">
+            <tspan x="10.385" y="20">30</tspan>
+        </text>
+    </g>
+</svg>

@@ -1,0 +1,54 @@
+// Variables
+// ==================
+:root {
+  --color: #121C42;
+  --contrast: #4869EE;
+  --gap: 20px;
+  --space: 8px;
+  --border: #D5E3EC;
+  --background: #fff;
+  --background-light: #FFF;
+  --shadow: #D8E1E8;
+  --list-hover: var(--background);
+  --play: #F3F9FB; // Couleur de fond du bouton play
+  --card-padding: 16px;
+  --header-background: darken(#F7FAFB, 20%);
+  --blue : blue;
+  --grey : #e8e8e8
+}
+
+// Outils
+// ==================
+@import "tools/reset";
+@import "tools/functions";
+@import "tools/mixins";
+@import "tools/layout";
+@import "tools/typography";
+@import "tools/animations";
+
+
+// Generic
+// ==================
+body {
+  font-family: $font;
+  font-size: 16px;
+  color: var(--color);
+  background: var(--background);
+  line-height: 1.4;
+}
+
+
+// Modules
+// ==================
+@import "modules/header";
+@import "modules/footer";
+@import "modules/card";
+@import "modules/btn";
+@import "modules/alert";
+@import "modules/forms";
+
+// Pages
+// ==================
+@import "pages/pages";
+@import "pages/posts";
+@import "woocommerce/checkout";

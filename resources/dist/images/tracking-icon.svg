@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="116" height="89" viewBox="0 0 116 89">
+    <g fill="none" fill-rule="evenodd" transform="translate(2)">
+        <ellipse cx="81.91" cy="28.98" fill="#FFDCCC" rx="28.385" ry="28.35"/>
+        <g>
+            <path fill="#FFF" d="M51.456 51.33c0 4.404-3.553 7.974-7.937 7.974-4.383 0-7.937-3.57-7.937-7.974 0-4.403 3.554-7.973 7.937-7.973 4.384 0 7.937 3.57 7.937 7.973" transform="translate(0 27.723)"/>
+            <path stroke="#00315E" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M111.9 51.326l.192-23.35c0-6.114-4.976-11.068-11.115-11.068h-17.41l.167 34.326 28.166.092z" transform="translate(0 27.723)"/>
+            <path stroke="#00315E" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M97.249 17.077L97.249 32.599 111.565 32.599" transform="translate(0 27.723)"/>
+            <path fill="#FFF" d="M105.881 51.33c0 4.404-3.553 7.974-7.938 7.974-4.383 0-7.936-3.57-7.936-7.974 0-4.403 3.553-7.973 7.936-7.973 4.385 0 7.938 3.57 7.938 7.973" transform="translate(0 27.723)"/>
+            <path stroke="#00315E" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M105.881 51.33c0 4.404-3.553 7.974-7.938 7.974-4.383 0-7.936-3.57-7.936-7.974 0-4.403 3.553-7.973 7.936-7.973 4.385 0 7.938 3.57 7.938 7.973z" transform="translate(0 27.723)"/>
+            <path fill="#D1FFED" stroke="#D1FFED" stroke-linecap="round" stroke-linejoin="round" stroke-width=".894" d="M18.654 51.458L37.171 51.458 37.171 19.694 0.325 19.665z" transform="translate(0 27.723)"/>
+            <path stroke="#00315E" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M8.753 34.32L31.3 34.32M15.882 41.695L31.511 41.695" transform="translate(0 27.723)"/>
+            <g stroke="#00315E" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+                <path d="M27.362 51.104L83.501 51.104 83.501.191 27.362.191 27.362 15.33M0 25.768L30.503 25.768" transform="translate(0 27.723) translate(.066 .13)"/>
+                <path fill="#FFF" d="M51.39 51.2c0 4.405-3.553 7.975-7.937 7.975-4.383 0-7.937-3.57-7.937-7.974 0-4.403 3.554-7.974 7.937-7.974 4.384 0 7.937 3.57 7.937 7.974z" transform="translate(0 27.723) translate(.066 .13)"/>
+            </g>
+        </g>
+    </g>
+</svg>

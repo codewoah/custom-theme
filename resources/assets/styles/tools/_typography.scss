@@ -1,0 +1,52 @@
+//@include font-face('euclidcircular', './fonts/euclidcircularb-regular-webfont', 300 400 600 700, null, woff2 woff);
+
+$font-400: 'euclidcircular-400', sans-serif;
+$font-600: 'euclidcircular-600', sans-serif;
+// Pour générer les polices : https://transfonter.org/
+
+
+.t-h {
+  font-family: $font-600;
+
+  &1 {
+    font-family: $font-600;
+    letter-spacing: normal;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+
+    @include up(1024) {
+      font-size: 54px;
+      line-height: 1.22;
+    }
+
+    @include down(1024) {
+      font-size: 38px;
+      line-height: 1.32;
+    }
+    @include down(480) {
+      font-size: 32px;
+      line-height: 1.32;
+    }
+    @include down(320) {
+      font-size: 26px;
+      line-height: 1.32;
+    }
+  }
+  &2 {
+    letter-spacing: normal;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+
+    @include up(1024) {
+      font-size: 38px;
+      line-height: 1.22;
+    }
+
+    @include down(1024) {
+      font-size: 30px;
+      line-height: normal;
+    }
+  }
+}

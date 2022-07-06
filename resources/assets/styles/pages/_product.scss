@@ -1,0 +1,560 @@
+.single-product {
+  #discount_input {
+    background: #fff;
+    .error {
+      text-align: left;
+    }
+  }
+
+  #side-product {
+    border-color: var(--grey);
+  }
+  .main-header {
+    //background: var(--light-peach);
+
+    &__logo {
+      path {
+        fill: var(--blue);
+      }
+    }
+  }
+  .desktop-menu__item {
+      a {
+        color: var(--blue);
+      }
+  }
+  .willo-product-detail {
+    position: relative;
+    padding-top: 80px;
+    @include up(1024) {
+      padding-top: 140px;
+      .section_title {
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+    }
+    .icons_section {
+      background: #f7fbff;
+      margin-top: space(17.5);
+      padding-bottom: space(17.5);
+      .section_title {
+        padding-top: space(17.5);
+        width: 100%;
+      }
+      .icons {
+        @extend %container-margin;
+        @extend .inner;
+        justify-content: space-between;
+        @include down(800) {
+          flex-direction: column;
+        }
+        &__item {
+          padding: 0;
+          @include down(800) {
+            width: 100%;
+          }
+        }
+      }
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 875px;
+      background: url(../../images/wave-product.svg) no-repeat center;
+      background-size: cover;
+      z-index: -1;
+      @include down(800) {
+        height: 560px;
+      }
+    }
+
+    .flex {
+      justify-content: space-between;
+    }
+
+    &__header {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      @include down(1024) {
+        margin-top: space(1);
+      }
+      h1 {
+        margin-top: space(22);
+        font-family: $font-600;
+        font-size: 38px;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.26;
+        letter-spacing: normal;
+        text-align: center;
+        color: var(--blue);
+        @include down(1024) {
+          margin-top: space(4);
+          font-size: 30px;
+          padding: 0 space(2);
+        }
+      }
+
+      p {
+        font-family: $font-400;
+        font-size: 22px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.55;
+        letter-spacing: normal;
+        text-align: center;
+        color: var(--marine);
+        margin-top: space(4);
+        max-width: space(90);
+        @include down(1024) {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &__gallery {
+      width: 50%;
+      margin-top: space(18.5);
+      @include down(1024) {
+        display: none !important;
+      }
+    }
+
+
+    &__plan {
+      width: 40%;
+      //margin-top: space(8);
+      margin-top: space(18.5);
+      @include down(1440) {
+        max-width: 450px;
+        margin-top: space(8);
+      }
+
+      @include down(1024) {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      #add-cart-price{
+        margin-left: space(.5);
+      }
+
+      #willo_product__add-to-cart,
+      button{
+        margin-bottom: space(3);
+        margin-top: space(3);
+      }
+
+      h1 {
+        font-family: $font-600;
+        font-size: 38px;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.26;
+        letter-spacing: normal;
+        color: #142cd2;
+        @include down(1024) {
+          text-align: center;
+        }
+      }
+
+      h4 {
+        font-size: 22px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.55;
+        letter-spacing: normal;
+        color: var(--marine);
+        margin-top: space(2);
+        @include down(1024) {
+          text-align: center;
+        }
+      }
+
+      h2 {
+        font-family: $font-600;
+        font-size: 22px;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.45;
+        letter-spacing: normal;
+        color: #142cd2;
+        @include down(1024) {
+          text-align: center;
+        }
+      }
+
+      p {
+        font-family: $font-400;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.63;
+        letter-spacing: normal;
+        color: var(--marine);
+        margin-top: space(2);
+        margin-bottom: space(4);
+        @include down(1024) {
+          text-align: center;
+        }
+        &.text--blue {
+          color: #142cd2;
+          text-align: center;
+          font-size: 16px;
+        }
+        &.text--center {
+          color: var(--marine);
+          text-align: center;
+          font-size: 14px;
+        }
+      }
+
+      .willo_product {
+        @include down(640) {
+          width: calc(100% + 32px);
+          margin-left: -16px;
+        }
+        &__row {
+          &:first-child {
+            border-top: 1px solid var(--grey);
+            padding-top: 20px;
+
+          }
+
+          //@include down(800) {
+          //  width: calc(100% + 64px);
+          //  margin-left: -32px;
+          //}
+
+          border-bottom: 1px solid var(--grey);
+          margin-bottom: space(4);
+
+          &__title {
+            display: flex;
+            font-family: $font-400;
+            font-size: 16px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.63;
+            letter-spacing: normal;
+            color: var(--marine);
+            margin-bottom: space(3);
+            @include down( 640 ) {
+              padding-left: space(3);
+            }
+          }
+
+          &__frequency {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: space(3.5);
+            align-items: center;
+            cursor: pointer;
+            @include down( 640 ) {
+              padding-left: space(3);
+              padding-right: space(3);
+            }
+
+            span {
+              position: relative;
+
+              &:first-child {
+                input {
+                  display: none;
+                }
+
+                label {
+                  font-family: $font-400;
+                  font-size: 16px;
+                  font-stretch: normal;
+                  font-style: normal;
+                  line-height: 1.63;
+                  letter-spacing: normal;
+                  text-align: center;
+                  color: var(--dark-grey);
+                  display: flex;
+                  align-items: center;
+                  cursor: pointer;
+
+                  &:before {
+                    content: '';
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    border: solid 1px #c6c6c6;
+                    display: inline-block;
+                    margin-right: space(2);
+                  }
+                }
+              }
+
+              &:last-child {
+                font-family: $font-400;
+                font-size: 16px;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.63;
+                letter-spacing: normal;
+                text-align: center;
+                color: var(--dark-grey);
+                display: flex;
+                align-items: center;
+
+                strong {
+                  margin-left: space(.5);
+                }
+
+                .subscription-details {
+                  display: none;
+                }
+              }
+            }
+
+            &--active {
+              span {
+                &:first-child {
+                  label {
+                    color: var(--blue);
+                    font-family: $font-600 !important;
+                    position: relative;
+                    &:before {
+                      border-color: var(--mint) ;
+                      border-width: 2px ;
+                    }
+
+                    &:after {
+                      content: '';
+                      width: 8px;
+                      height: 8px;
+                      border-radius: 50%;
+                      background: var(--blue);
+                      position: absolute;
+                      left: space(1);
+                      top: 50%;
+                      transform: translateY(-50%);                    }
+                  }
+                }
+
+                &:last-child {
+                  color: var(--blue) !important;
+                  font-family: $font-600 !important;
+                  strong {
+                    font-family: $font-600;
+                    font-size: 20px;
+                  }
+                }
+              }
+            }
+          }
+
+          .selector-size {
+            display: flex;
+            justify-content: space-between;
+            h3 {
+              text-transform: capitalize;
+              font-family: $font-400;
+              color: var(--dark-grey);
+              font-weight: normal;
+            }
+            &__active {
+              h3 {
+                border-bottom: solid 4px #142cd2;
+                color: #142cd2;
+                font-family: $font-600;
+                font-weight: 600;
+              }
+
+              .pictos {
+                margin-top: 30px !important;
+              }
+
+              #select_ui_reveal {
+                &:before {
+                  background: url("../../images/arrow-select-ui-open.svg") no-repeat center;
+                  transform: rotate(180deg);
+                }
+                &.show {
+                  &:before {
+                    background: url("../../images/arrow-select-ui-open.svg") no-repeat center;
+                    transform: rotate(0deg) !important;
+                  }
+                }
+
+              }
+            }
+
+            > span, > div {
+              width: 100%;
+              text-align: center;
+              font-size: 16px;
+              font-weight: normal;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 2.25;
+              letter-spacing: normal;
+              color: var(--dark-grey);
+              cursor: pointer;
+
+              .pictos {
+                margin-top: 34px;
+                margin-bottom: 24px;
+              }
+            }
+
+          }
+        }
+        &__submit {
+          @include down( 640 ) {
+            padding-left: space(3);
+            padding-right: space(3);
+          }
+        }
+        .question-mark {
+          &__content {
+            @include down(800) {
+              right: 0px;
+            }
+          }
+        }
+      }
+    }
+
+    &__gallery {
+      display: flex;
+      position: relative;
+      flex-direction: column-reverse;
+      justify-content: flex-end;
+      &__mini {
+        display: flex;
+        justify-content: center;
+        margin-top: space(6);
+        &__thumb {
+          width: 80px;
+          height: 80px;
+          border-radius: 40px;
+          border: solid 1px var(--grey);
+          background: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          &:not(:last-child) {
+            margin-right: 20px;
+          }
+          &.active {
+            border: solid 2px var(--blue);
+          }
+          img {
+            max-width: 55px;
+            height: auto;
+            object-fit: cover;
+          }
+        }
+
+      }
+      &__full {
+        img {
+          object-fit: cover;
+          max-height: 640px;
+        }
+      }
+    }
+
+    &.sold-out {
+      .willo-product-detail__gallery {
+        position: relative;
+        &:before {
+          content: '';
+          width: 160px;
+          height: 80px;
+          background: url("../../images/image-sold-out@2x.png") no-repeat;
+          position: absolute;
+          top: 23%;
+          /* left: 0; */
+          background-size: contain;
+          right: 60px;
+        }
+      }
+      .tag--mint {
+        color: var(--dark-grey) !important;
+        background: #f6f6f6;
+      }
+      .selector-size__active {
+        h3 {
+          border-color: var(--grey) !important;
+          color: var(--dark-grey) !important;
+          font-family: $font-400 !important;
+        }
+      }
+      .willo_product__row__title,
+      .willo_product__row__frequency--active {
+        color: var(--dark-grey) !important;
+        label, span {
+          color: var(--dark-grey) !important;
+          &:before {
+            border-color: #c6c6c6 !important;
+          }
+          &:after {
+            background: var(--dark-grey) !important;
+          }
+        }
+      }
+    }
+  }
+  .willo-product-mobile-gallery {
+    display: none;
+    margin-top: 100px;
+    width: 100%;
+    overflow-x: hidden;
+    @extend %container-margin;
+    @extend .inner;
+    @include down(1024) {
+      display: block;
+    }
+    .mobile-product-slider {
+      width: 100%;
+      padding: 0 space(3);
+      .swiper-wrapper {
+        display: flex;
+        align-items: center;
+        .swiper-slide {
+          img {
+            width: 100%;
+            height: auto;
+            max-width: 400px;
+            margin: 0 auto;
+            display: table;
+          }
+        }
+      }
+
+      .swiper-pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: space(5);
+        span {
+          width: 6px;
+          height: 6px;
+          background-color: var(--pastel-peach);
+          margin-left: space(1);
+          border-radius: 50%;
+          &.swiper-pagination-bullet-active {
+            background-color: #142cd2;
+          }
+        }
+      }
+    }
+
+  }
+}
+

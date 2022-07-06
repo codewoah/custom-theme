@@ -1,0 +1,19 @@
+{
+  "entrypoints": {
+    "main-js": {
+      "js": [
+        "/wp-content/themes/willo/resources/dist/runtime.69ca4662.js",
+        "/wp-content/themes/willo/resources/dist/main-js.11577830.js"
+      ]
+    },
+    "main-css": {
+      "js": [
+        "/wp-content/themes/willo/resources/dist/runtime.69ca4662.js",
+        "/wp-content/themes/willo/resources/dist/main-css.082f9086.js"
+      ],
+      "css": [
+        "/wp-content/themes/willo/resources/dist/main-css.9f5db6ff.css"
+      ]
+    }
+  }
+}

@@ -1,0 +1,71 @@
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  font-family: $font-400;
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  border: solid 1px transparent;
+  border-radius: 32px;
+  padding: space(2) 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  color: var(--blue);
+  outline: none;
+  &.grey-border {
+    border: solid 1px var(--grey);
+  }
+  &:focus {
+    border-color: var(--blue)!important;
+    color: var(--blue) !important;
+  }
+  &.focus-visible {
+    border-color: var(--blue) !important;
+    color: var(--blue) !important;
+  }
+  &::placeholder {
+    color: var(--dark-grey);
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--dark-grey);
+  }
+  &::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--dark-grey);
+  }
+}
+textarea {
+  border-radius: 0;
+}
+
+form {
+  .title {
+    padding: 0 !important;
+    margin: 0;
+    &:not(:first-child) {
+      margin-top: space(5) !important;
+    }
+  }
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: solid 1px var(--grey);
+  -webkit-text-fill-color: var(--blue);
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-box-shadow: 0 0 0 100px white inset;
+  background: transparent;
+}

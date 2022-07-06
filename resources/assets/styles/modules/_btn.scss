@@ -1,0 +1,158 @@
+.willo-checkbox {
+  position: relative;
+  input {
+    display: none;
+  }
+  label {
+    color: var(--marine);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    &:before {
+      content: "";
+      width: 26px;
+      height: 26px;
+      border: solid 1px var(--blue);
+      border-radius: 5px;
+      margin-right: space(2);
+    }
+  }
+  &--checked {
+    label {
+      &:after {
+        content: "";
+        width: 14px;
+        position: absolute;
+      }
+    }
+  }
+}
+
+.btn {
+  font-family: $font-600;
+  height: 56px;
+  padding: space(2) space(10);
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: 0.8px;
+  border-radius: 30px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  text-transform: uppercase;
+  transition: all 450ms ease-in-out;
+  &:hover {
+    background: var(--marine);
+    border: 1px solid var(--marine);
+  }
+  @include down(800) {
+    white-space: nowrap;
+    max-width: 100%;
+  }
+  &:disabled {
+    opacity: .1;
+    cursor: not-allowed;
+  }
+  &--salmon {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #142cd2 !important;
+    border: solid 3px var(--white);
+    padding-left: 60px;
+    padding-right: 60px;
+    span {
+      position: relative;
+      display: flex;
+      align-items: center;
+      img {
+        position: relative;
+        padding-right: 12px;
+      }
+    }
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.7);
+      border: solid 3px var(--electric-blue);
+    }
+  }
+  &--blue {
+    background: var(--blue);
+    color: #fff !important;
+    border: 1px solid var(--blue);
+    &--outline {
+      background: transparent;
+      color:var(--blue) !important;
+      &:hover {
+        background: transparent;
+        border-color: var(--pastel-peach);
+      }
+
+    }
+  }
+  &--full {
+    width: 100%;
+  }
+  @include down(576) {
+    width: 100%;
+  }
+}
+
+[type="checkbox"] + label {
+  padding-left: space(3);
+  margin-left: 12px;
+  font-family: $font-400;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  color: var(--marine);
+  cursor: pointer;
+}
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  transition: all .275s;
+  padding-right: space(1);
+  position: absolute;
+  border-radius: 4px;
+  border: solid 1px #142cd2;
+}
+
+/* Aspect de la coche */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '';
+  position: absolute;
+  transition: all .2s;
+  background: url('../../images/icon-check.svg');
+  left: 5px;
+  width: 14px;
+  height: 12px;
+  top: 6px;
+  border: none;
+}
+
+/* Aspect non cochée */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+
+/* Aspect cochée */
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1) rotate(0);
+}

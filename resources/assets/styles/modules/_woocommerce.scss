@@ -1,0 +1,22 @@
+.woocommerce-message,.woocommerce-password-hint,.woocommerce-error {
+  color: var(--salmon);
+  text-align: center;
+  margin-bottom: space(1);
+}
+.woocommerce-password-hint {
+  color: var(--marine);
+  padding: 0 space(2);
+  display: block;
+  text-align: left;
+}
+
+.woocommerce-password-strength {
+  &.bad, &.short {
+    color: var(--salmon);
+    padding: 0 space(2);
+  }
+  &.good, &.strong {
+    color: var(--mint);
+    padding: 0 space(2);
+  }
+}

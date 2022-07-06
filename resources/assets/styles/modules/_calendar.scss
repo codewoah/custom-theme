@@ -1,0 +1,126 @@
+.rd-container {
+  width: 100%;
+  margin-top: space(5);
+  .rd-time {
+    display: none;
+  }
+  .rd-month {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    > button {
+      position: absolute;
+      cursor: pointer;
+      &.rd-next {
+        right: 0;
+        width: 7px;
+        height: 22px;
+        border: 0;
+        background: url(../../images/arrow-next-calendar.svg) no-repeat center center;
+      }
+      &.rd-back {
+        left: 0;
+        width: 7px;
+        height: 22px;
+        border: 0;
+        background: url(../../images/arrow-next-calendar.svg) no-repeat center center;
+        transform: rotate(-180deg);
+        &:disabled {
+          opacity: .1;
+          cursor: not-allowed;
+        }
+
+      }
+    }
+    .rd-month-label{
+      font-size: 16px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.63;
+      letter-spacing: normal;
+      text-align: center;
+      color: var(--marine);
+      margin-bottom: space(3);
+    }
+
+    .rd-days {
+      width: 100%;
+      border-top: solid 1px var(--marine);
+      border-bottom: solid 1px var(--marine);
+
+      thead {
+        tr {
+          th {
+            padding: 20px 0;
+            font-family: $font-600;
+            font-size: 16px;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 2.13;
+            letter-spacing: normal;
+            text-align: center;
+            color: var(--silver);
+            width: 44px;
+            height: 36px;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            width: 44px;
+            height: 36px;
+            text-align: center;
+            font-family: $font-600;
+            font-size: 16px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 2.13;
+            letter-spacing: normal;
+            color: var(--marine);
+            padding-bottom: 10px;
+            cursor: pointer;
+            &.rd-day-disabled {
+              opacity: .1;
+              cursor: not-allowed;
+            }
+            &.rd-day-selected {
+              position: relative;
+              &:before {
+                content: '';
+                position: absolute;
+                background-color: var(--pastel-peach);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                z-index: -1;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                top: 50%;
+                margin-top: -5px;
+              }
+
+            }
+          }
+          &:last-child {
+            td {
+              padding-bottom:20px;
+              &.rd-day-selected{
+                &:before{
+                  margin-top: -10px;
+
+                }
+              }
+            }
+
+          }
+        }
+      }
+
+    }
+  }
+}

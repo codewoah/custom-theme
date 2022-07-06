@@ -1,0 +1,203 @@
+.side-cart{
+  position: fixed;
+  width: 575px;
+  background: #fff;
+  top: 0;
+  height: 100vh;
+  right: 0;
+  transition: all 250ms ease-in-out;
+  transform: translateX(100%);
+  visibility: hidden;
+  z-index: 999999;
+  padding: space(4) 60px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  .product-name__image {
+    img {
+      background: var(--light-peach);
+    }
+  }
+  @include down(575) {
+    width: 100%;
+    padding: space(3);
+  }
+  input.invalid {
+    border-color: var(--salmon);
+  }
+  .error {
+    color: var(--salmon);
+    position: relative;
+    margin-top: space(1);
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    @include down(800) {
+      text-align: left !important;
+    }
+  }
+  &.show {
+    visibility: visible;
+    transform: translateX(0);
+  }
+  h2 {
+    color: var(--blue);
+    border-bottom: 1px solid var(--grey);
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 22px;
+    font-family: $font-600;
+    margin-bottom: space(4);
+    position: relative;
+    .timer {
+      display: block;
+      font-family: $font-400;
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.57;
+      letter-spacing: normal;
+      text-align: center;
+      color: #142cd2;
+      margin-top: 10px;
+    }
+    #empty_cart {
+      position: absolute;
+      right: 0;
+      top: 4px;
+      cursor: pointer;
+      &:hover {
+        path {
+          stroke: var(--salmon);
+        }
+      }
+    }
+  }
+  .shop_table {
+    tfoot {
+      tr {
+        border-color: var(--grey) !important;
+      }
+    }
+  }
+  &__content {
+    small {
+      font-size: 16px;
+      font-family: $font-400;
+      text-align: center;
+      margin-top: space(3);
+      display: block;
+      &.shipping-notice {
+        color: var(--marine);
+        font-size: 14px;
+        @include down(800) {
+          padding-bottom: space(14);
+        }
+      }
+    }
+    h6 {
+      font-family: $font-600;
+      font-size: 16px;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.63;
+      letter-spacing: normal;
+      color: #142cd2;
+      text-align: center;
+      margin-top: 48px;
+    }
+    p {
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.71;
+      letter-spacing: normal;
+      text-align: left !important;
+      color: var(--marine);
+      margin-top: space(1);
+    }
+    h3 {
+      font-family: $font-600;
+      font-size: 22px;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.45;
+      letter-spacing: normal;
+      text-align: center;
+      color: #142cd2;
+      &:after {
+        content: '';
+        position: relative;
+        border-bottom: solid 1px var(--grey);
+        padding-top: space(4);
+        display: none;
+      }
+    }
+    img.bandeau {
+      width: calc(100% + 128px);
+      max-width: calc(100% + 128px);
+      margin-left: -64px;
+      margin-top: space(4);
+
+    }
+    form{
+      margin-top: space(5);
+      h4 {
+        font-family: $font-600;
+        font-size: 16px;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.63;
+        letter-spacing: normal;
+        color: #142cd2;
+      }
+      small {
+        font-family: $font-400;
+        font-size: 12px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.83;
+        letter-spacing: normal;
+        color: var(--dark-grey);
+        margin-top: 0;
+        text-align: left;
+        margin-left: space(4);
+      }
+      p {
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.71;
+        letter-spacing: normal;
+        color: var(--marine);
+        margin-bottom: space(2);
+      }
+    }
+  }
+  &__close {
+    //margin-bottom: space(1);
+    margin-right: auto;
+    display: block;
+    cursor: pointer;
+    margin-left: -22px;
+    @include down( 640 ) {
+      margin-left: 0;
+    }
+  }
+  .action {
+    @include down(800) {
+      padding-bottom: space(14);
+    }
+    button {
+      margin-top: space(5);
+      margin-bottom: space(5);
+      width: 100%;
+
+    }
+
+  }
+}

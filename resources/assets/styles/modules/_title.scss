@@ -1,0 +1,213 @@
+.section_title {
+  text-align: center;
+  position: relative;
+  margin: space(5) 0 space(3) 0;
+  overflow: hidden;
+  padding: 0 space(2) space(1.5) space(2);
+  @include up(1024) {
+    padding: 0 0 space(1.5) 0;
+    margin: space(12) 0 space(6) 0;
+  }
+  & h1 {
+    text-align: left;
+    font-size: 30px;
+    width: max-content;
+    font-family: $font-600;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.26;
+    letter-spacing: normal;
+    color: var(--blue);
+    margin: 0 auto;
+    @include up(768) {
+      font-size: 38px;
+    }
+    & .end, & .start {
+      position: relative;
+    }
+    & .end::after, & .start::after {
+      content: "";
+      display: block;
+      height: 24px;
+      width: 250px;
+      position: absolute;
+      margin-top: space(2.5);
+      margin-left: space(0);
+      background-image: url(../../images/wave-vector@2x.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      @include up(1024) {
+        height: 32px;
+        width: 250px;
+        background-size: contain;
+        margin-left: space(2.5);
+      }
+      /*
+      @include down(1024) {
+        width: 4vw; //to remove, to signal in mobile is not workibg
+      }
+      */
+    }
+    &.bottom-left {
+      width: 100%;
+      @include up(1024) {
+        width: max-content;
+      }
+      text-align: center;
+      & .end::after {
+        display: block;
+        position: relative;
+        left: 0;
+        @include up(1024) {
+          left: -50%;
+        }
+      }
+      & .start {
+        display: none !important;
+      }
+      &.before-text {
+        width: max-content;
+        @include up(1024) {
+          display: block;
+          text-align: right;
+          position: relative;
+        }
+      }
+      &.before-text .end {
+        position: absolute;
+        left: 0;
+      }
+    }
+    &.bottom-right {
+      text-align: center;
+      width: 100%;
+      @include up(1024) {
+        width: max-content;
+      }
+      & .end::after {
+        display: block;
+        position: relative;
+        left: 50%;
+        margin-right: space(2.5);
+      }
+      & .start {
+        display: none !important;
+      }
+    }
+    &.top-left {
+      text-align: center;
+      & .start::after {
+        display: block;
+        left: 0%;
+        position: relative;
+        top: -10px;
+        @include up(1024) {
+          top: 0;
+        }
+      }
+      & .end {
+        display: none !important;
+      }
+    }
+    &.top-right {
+      text-align: center;
+      & .start::after {
+        display: block;
+        position: relative;
+        left: 50%;
+        top: -10px;
+        @include up(1024) {
+          top: 0;
+        }
+      }
+      & .end {
+        display: none !important;
+      }
+    }
+    &.after-text {
+      width: max-content;
+      text-align: left;
+    }
+    &.after-text .end::after {
+      display: inline-block;
+      position: absolute;
+      left: 20px;
+      @include up(1024) {
+        left: 10px;
+      }
+    }
+    &.before-text {
+      display: block;
+      text-align: right;
+    }
+    &.before-text .start {
+      position: absolute;
+      left: -20px;
+      @include up(1024) {
+        position: relative;
+        left: 0;
+      }
+      @include down(420) {
+        left: -35px;
+      }
+    }
+    &.before-text .start::after {
+      display: inline-block;
+      position: relative;
+      margin-left: space(0);
+      @include up(1024) {
+        margin-left: space(2.5);
+      }
+    }
+    &.without-line {
+      text-align: center;
+      & .end {
+        display: none !important;
+      }
+      & .start {
+        display: none !important;
+      }
+    }
+    &.text-right {
+      width: 25%;
+      width: max-content;
+      text-align: right;
+      & p {
+        text-align: right;
+      }
+    }
+  }
+  & .margin-top-title {
+    margin-top: space(12);
+  }
+}
+
+.title-description {
+  font-family: $font-400;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  color: var(--marine);
+  width: auto;
+  margin: space(4) auto;
+  padding: space(3) 2%;
+  & p {
+    margin-bottom: space(2);
+  }
+  & strong {
+    font-weight: 600;
+  }
+  & a {
+    color: var(--blue);
+  }
+  @include up(1024) {
+    font-size: 22px;
+    line-height: 1.55;
+    width: 55%;
+  }
+  @include down(1024) {
+    padding-left: 37px;
+    padding-right: 37px;
+  }
+}

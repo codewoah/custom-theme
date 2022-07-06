@@ -1,0 +1,67 @@
+// Conteneur
+// ==================
+:root {
+  --container-padding: 20px;
+  --container-width: calc(100vw - var(--container-padding) * 2);
+}
+
+%container,
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: calc(50% - var(--container-width) / 2);
+  padding-right: calc(50% - var(--container-width) / 2);
+}
+
+
+.has_sidebar {
+  main.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+%container-margin {
+  margin-left: auto;
+  margin-right: auto;
+  width: var(--container-width);
+}
+
+.wrapper, main.content {
+  @extend %container;
+}
+
+
+@media only screen and (min-width: 1440px) {
+  :root {
+    --container-width: 1440px;
+  }
+}
+
+.spacer-top {
+  padding-top: 80px;
+  &--account {
+  .section_title{
+    padding-top: space(22);
+    padding-bottom: space(11);
+    margin: 0;
+    width: 100%;
+  }
+  }
+  @include up(1024) {
+    padding-top: 140px;
+  }
+}
+
+
+// Espacement
+// ==================
+.full-container {
+  padding-left:space(2) !important;
+  padding-right:space(2) !important;
+  @include up(1024) {
+    padding-left: space(23) !important;
+    padding-right: space(23) !important;
+  }
+}
